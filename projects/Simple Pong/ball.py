@@ -9,8 +9,8 @@ class Ball(Turtle):
         self.color('purple')
         self.penup()
         self.goto(0, 0)
-        self.x_move = 10
-        self.y_move = 10
+        self.x_move = 6
+        self.y_move = 6
 
     def move(self):
         new_x = self.xcor() + self.x_move
