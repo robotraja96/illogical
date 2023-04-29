@@ -21,7 +21,7 @@ class CarManager(Turtle):
         self.color(random.choice(COLORS))
         self.penup()
         self.setheading(90)
-        self.setpos(random.randint(-300, 300), random.randint(-250, 250))
+        self.setpos(250, random.randint(-250, 250))
 
     def move(self):
         self.setpos(self.xcor() - CarManager.speed_meter, self.ycor())
