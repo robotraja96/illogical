@@ -38,7 +38,7 @@ while game_is_on:
             scoring.new_score()
     for objects in cars:
         objects.move()
-        if tim.distance(objects) < 30:
+        if tim.distance(objects) < 20:
             tim.goto(player.STARTING_POSITION)
             scoring.game_over()
             game_is_on = False
