@@ -49,8 +49,7 @@ while is_game_on:
 
     # Detect collision with paddle
 
-    if (ball.xcor() == 320 and ball.distance(right_paddle.paddle) < 40) or (
-            ball.xcor() == -320 and ball.distance(left_paddle.paddle) < 40):
+    if (ball.xcor() == 320 and ball.distance(right_paddle.paddle) < 40) or (ball.xcor() == -320 and ball.distance(left_paddle.paddle) < 40):
         ball.x_move *= -1
         ball.speed(ball_speed)
         ball_speed *= 0.9
@@ -71,14 +70,14 @@ while is_game_on:
         right_score.new_score()
         ball_speed = 0.1
 
-    if left_Score.score == 2:
+    if left_Score.score == 15:
         game_over = Score()
         game_over.pendown()
         game_over.color('Red')
         game_over.penup()
         game_over.write(f'Game over.', True, scoreboard.ALIGNMENT, scoreboard.FONT)
 
-    elif right_score.score == 2:
+    elif right_score.score == 15:
         game_over = Score()
         game_over.pendown()
         game_over.color('Red')
